@@ -1,8 +1,18 @@
-# data set yang digunakan pada project Tugas Besar Machine adalah dataset cereal
-# dataset cereal dipilih karena cereal merupakan makanan populer yang banyak dikonsumsi,
-# kandungan gizi cereal pun bermacam-macam sehingga konsumen butuh mengetahui
-# kandungan apa saja yang baik dan sesuai dengan kebutuhan dari tubuh konsumen itu sendiri
-# tujuan: menentukan rating cereal dengan nilai gizi tertentu didalamnya
-# Metode : linear regression
-# library model: sklearn, numpy, panda
-# attribut cereal: calories,  protein,  fat,  sodium,  fiber,  carbo,  potass,  vitamins
+data set yang digunakan pada project Tugas Besar Machine adalah dataset cereal
+
+dataset cereal dipilih karena cereal merupakan makanan populer yang banyak dikonsumsi, kandungan gizi cereal pun bermacam-macam sehingga konsumen butuh mengetahui kandungan apa saja yang baik dan sesuai dengan kebutuhan dari tubuh konsumen itu sendiri. setelah tahu rating dari nilai gizi cereal maka konsumen dapat memilih yan terbaik dari antara cereal yang ada dipasaran.
+
+tujuan: 
+   -menentukan rating cereal dengan nilai gizi tertentu didalamnya
+   -dapat menggunakan salah satu metode sebagai alat prediksi
+   
+Metode : 
+   -linear regression : 
+    dipilih karena dianggap mendapatkan akurasi dari training dan test terbaik
+
+library model: 
+   -sklearn
+   -numpy
+   -panda
+
+attribut cereal dalam dataset: calories,  protein,  fat,  sodium,  fiber,  carbo,  potass,  vitamins
