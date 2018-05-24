@@ -6,6 +6,17 @@ from sklearn.externals import joblib
 import numpy as np
 from flask_cors import CORS
 
+
+# data set yang digunakan pada project Tugas Besar Machine adalah dataset cereal
+# dataset cereal dipilih karena cereal merupakan makanan populer yang banyak dikonsumsi,
+# kandungan gizi cereal pun bermacam-macam sehingga konsumen butuh mengetahui
+# kandungan apa saja yang baik dan sesuai dengan kebutuhan dari tubuh konsumen itu sendiri
+# tujuan: menentukan rating cereal dengan nilai gizi tertentu didalamnya
+# Metode : linear regression
+# library model: sklearn, numpy, panda
+# attribut cereal: calories,  protein,  fat,  sodium,  fiber,  carbo,  potass,  vitamins
+
+
 app = Flask(__name__)
 Swagger(app)
 CORS(app)
@@ -163,7 +174,7 @@ def predict():
         200:
           description: Success Input
     """
-    new_task = request.get_json()
+    new_task = request.get_json() # mengambil request body
 
     calories = new_task['calories']
     protein = new_task['protein']
@@ -174,9 +185,9 @@ def predict():
     potass = new_task['potass']
     vitamins = new_task['vitamins']
 
-    X_New = np.array([[calories,  protein,  fat,  sodium,  fiber,  carbo,  potass,  vitamins]])
+    X_New = np.array([[calories,  protein,  fat,  sodium,  fiber,  carbo,  potass,  vitamins]]) # X_new objek untuk diprediksi dengan array
 
-    clf = joblib.load('static/cerealRegressor.pkl')
+    clf = joblib.load('static/cerealRegressor.pkl') # joblib untuk memanggil model yang telah dibuat
 
     resultPredict = clf[0].predict(X_New)
 
